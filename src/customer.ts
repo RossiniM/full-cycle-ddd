@@ -3,6 +3,7 @@
      _id: string;
     _name: string;
     _address: string;
+    _active: boolean = true;
 
     constructor(id:string, name:string, address: string){
 
@@ -16,17 +17,16 @@
       return this._id;
     }
 
-    get name():string{
-      return this._name;
+    changeName(name: string){
+       this._name = name;
     }
 
+    activate(){
+      this._active = true;
+    }
 
-    get address():string{
-      return this._address;
+    inactivate(){
+      this._active = false;
     }
 
  }
-
- //Entidade anemica
- //Cria-se essas entidades anemicas em virtude da ORM
- //DDD as entidades possui regra de negócio
