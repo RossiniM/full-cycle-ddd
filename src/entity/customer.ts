@@ -2,10 +2,10 @@
 
      _id: string;
     _name: string;
-    _address: string;
+    _address: Address;
     _active: boolean = true;
 
-    constructor(id:string, name:string, address: string){
+    constructor(id:string, name:string, address: Address){
 
       this._id = id;
       this._address = address;
