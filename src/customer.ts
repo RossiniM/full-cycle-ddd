@@ -25,8 +25,23 @@
       this._active = true;
     }
 
-    inactivate(){
+    inactivate(){ 
       this._active = false;
     }
 
  }
+/*
+
+Complexidade de negócio
+
+Domain
+- Entity
+ -- Customer.ts(Regra de negócio)
+
+
+ Complexidade acidental
+
+ infra - Mundo externo
+- Entity/Model
+ -- customer.ts(get,set)
+*/
