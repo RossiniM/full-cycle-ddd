@@ -43,8 +43,9 @@ export default class Product{
   }
 
 
-  changePrice(price: number){
+  changePrice(price: number):Product{
     this._price = price;
     this.validate();
+    return this;
   }
 }
