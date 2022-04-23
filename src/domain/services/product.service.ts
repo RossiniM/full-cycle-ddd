@@ -4,7 +4,7 @@ export default class ProductService {
 
 
   static increasePrice(products: Product[], percentage: number): Product[] {
-   return  products.map(product => {
+    return products.map(product => {
       const newPrice = product.price * (1 + (percentage / 100))
       return product.changePrice(newPrice);
     }

@@ -1,13 +1,13 @@
 
 import Product from "./product";
 
-describe("Product unit tests", () =>{
+describe("Product unit tests", () => {
 
   it("should throw err when id is empty", () => {
 
     expect(() => {
 
-      const product = new Product("", "Product 1", 100 );
+      const product = new Product("", "Product 1", 100);
 
     }).toThrowError("ID is required");
   });
@@ -16,7 +16,7 @@ describe("Product unit tests", () =>{
 
     expect(() => {
 
-      const product = new Product("1", "", 100 );
+      const product = new Product("1", "", 100);
 
     }).toThrowError("Name is required");
   });
@@ -25,7 +25,7 @@ describe("Product unit tests", () =>{
 
     expect(() => {
 
-      const product = new Product("1", "Product 1", - 100 );
+      const product = new Product("1", "Product 1", - 100);
 
     }).toThrowError("Price is invalid");
   });
@@ -33,32 +33,32 @@ describe("Product unit tests", () =>{
 
   it("should change name ", () => {
 
-      const product = new Product("1", "Product 1", 100 );
-      product.changeName("productName");
-      expect(product.name).toBe("productName");
+    const product = new Product("1", "Product 1", 100);
+    product.changeName("productName");
+    expect(product.name).toBe("productName");
 
   });
 
 
   it("should change price to valid value ", () => {
 
-    const product = new Product("1", "Product 1", 100 );
+    const product = new Product("1", "Product 1", 100);
     product.changePrice(200);
     expect(product.price).toBe(200);
 
-});
+  });
 
 
-it("should change price to invalid value ", () => {
+  it("should change price to invalid value ", () => {
 
- expect( ()=>{
-  const product = new Product("1", "Product 1", 100 );
- 
-  product.changePrice(-5);
+    expect(() => {
+      const product = new Product("1", "Product 1", 100);
 
- }).toThrowError("Price is invalid");
+      product.changePrice(-5);
+
+    }).toThrowError("Price is invalid");
 
 
-});
+  });
 
 });

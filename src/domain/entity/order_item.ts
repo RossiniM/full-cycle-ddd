@@ -1,5 +1,5 @@
 
-  
+
 export default class OrderItem {
   private _id: string;
   private _productId: string;
