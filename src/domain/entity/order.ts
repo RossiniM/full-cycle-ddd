@@ -1,5 +1,5 @@
 
-  
+
 import OrderItem from "./order_item";
 
 export default class Order {
