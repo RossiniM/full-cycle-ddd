@@ -46,6 +46,11 @@ export default class Order {
     return true;
   }
 
+  changeCustomer(customerId: string):Order{
+    this._customerId = customerId
+    return this;
+ }
+
   total(): number {
     return this._items.reduce((acc, item) => acc + item.price, 0);
   }
