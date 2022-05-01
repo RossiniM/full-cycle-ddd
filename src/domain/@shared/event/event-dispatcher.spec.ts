@@ -1,13 +1,13 @@
 import { UUID } from "sequelize/types";
-import Address from "../../entity/adress";
-import Customer from "../../entity/customer";
-import CustomerChangeAddressEvent from "../customer/customer-change-address.event";
-import CustomerCreatedEvent from "../customer/customer-created.event";
-import SendLogWheCustomerAddresIsChangedHandler from "../customer/handler/send-log-when-customer-is-changed.handler";
-import SendLogWheCustomerIsCreatedHandler1 from "../customer/handler/send-log-when-customer-is-createad.handler";
-import SendLogWheCustomerIsCreatedHandler2 from "../customer/handler/send-log-when-customer-is-createad.handler2";
-import SendEmailWhenProductIsCreatedHandler from "../product/handler/send-email-when-product-is-createad.handler";
-import ProductCreatedEvent from "../product/product-created.event";
+import Address from "../../customer/entity/adress";
+import Customer from "../../customer/entity/customer";
+import CustomerChangeAddressEvent from "../../customer/event/customer-change-address.event";
+import CustomerCreatedEvent from "../../customer/event/customer-created.event";
+import SendLogWheCustomerAddresIsChangedHandler from "../../customer/event/handler/send-log-when-customer-is-changed.handler";
+import SendLogWheCustomerIsCreatedHandler1 from "../../customer/event/handler/send-log-when-customer-is-createad.handler";
+import SendLogWheCustomerIsCreatedHandler2 from "../../customer/event/handler/send-log-when-customer-is-createad.handler2";
+import SendEmailWhenProductIsCreatedHandler from "../../product/event/handler/send-email-when-product-is-createad.handler";
+import ProductCreatedEvent from "../../product/event/product-created.event";
 import EventDispatcher from "./event-dispatcher";
 
 describe("Domain event tests", () => {
